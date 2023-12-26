@@ -1,3 +1,5 @@
+local lga_actions = require("telescope-live-grep-args.actions")
+
 local options = {
   defaults = {
     vimgrep_arguments = {
@@ -48,7 +50,25 @@ local options = {
     },
   },
 
-  extensions_list = { "themes", "terms" },
+  extensions_list = { "themes", "terms", "fzf", "live_grep_args" },
+  extensions = {
+    fzf = {
+      fuzzy = true,
+      override_generic_sorter = true,
+      override_file_sorter = true,
+      case_mode = "smart_case",
+    },
+
+    live_grep_args = {
+      auto_quoting = true,
+      mappings = {
+        i = {
+          ["<C-k>"] = lga_actions.quote_prompt(),
+          ["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
+        },
+      },
+    }
+  },
 }
 
 return options
