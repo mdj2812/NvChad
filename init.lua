@@ -20,5 +20,16 @@ dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
 require "plugins"
 
-vim.api.nvim_set_option("clipboard","unnamed")
+vim.g.clipboard = {
+  name = "myClipboard",
+  copy = {
+    ['+'] = "tmux load-buffer -",
+    ['*'] = "tmux load-buffer -",
+  },
+  paste = {
+    ['+'] = "tmux save-buffer -",
+    ['*'] = "tmux save-buffer -",
+  },
+  cache_enabled = 1
+}
 
