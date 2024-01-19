@@ -14,8 +14,7 @@ lspconfig.clangd.setup {
     "-j=8",
     "--offset-encoding=utf-16",
     "--malloc-trim",
-    "--background-index",
-    "--pch-storage=memory"
+    "--background-index"
   },
   capabilities = capabilities,
 }
