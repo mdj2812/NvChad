@@ -61,7 +61,6 @@ local plugins = {
   {
     "tpope/vim-surround",
     event = "VeryLazy",
-<<<<<<< HEAD
   },
   {
     "hedyhli/outline.nvim",
@@ -73,8 +72,6 @@ local plugins = {
     opts = {
       -- Your setup opts here
     },
-=======
->>>>>>> f75f21e (Customize my config)
   }
 }
 return plugins
