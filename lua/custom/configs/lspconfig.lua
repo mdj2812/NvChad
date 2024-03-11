@@ -46,7 +46,7 @@ lspconfig.clangd.setup {
     "--offset-encoding=utf-16",
     "--clang-tidy",
     "--malloc-trim",
-    "--background-index"
+    "--background-index",
     "--pch-storage=file"
   },
   capabilities = capabilities,
