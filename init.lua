@@ -33,4 +33,4 @@ vim.g.clipboard = {
   },
   cache_enabled = 1
 }
-
+vim.lsp.set_log_level("debug")

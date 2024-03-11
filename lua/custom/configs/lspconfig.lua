@@ -47,7 +47,7 @@ lspconfig.clangd.setup {
     "--clang-tidy",
     "--malloc-trim",
     "--background-index",
-    "--pch-storage=file"
+    "--pch-storage=disk"
   },
   capabilities = capabilities,
 }
