@@ -13,6 +13,7 @@ lspconfig.clangd.setup {
     "clangd",
     "-j=8",
     "--offset-encoding=utf-16",
+    "--clang-tidy",
     "--malloc-trim",
     "--background-index"
   },
