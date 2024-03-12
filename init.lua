@@ -21,16 +21,3 @@ vim.opt.rtp:prepend(lazypath)
 require "plugins"
 
 vim.opt.mousemodel = "extend"
-vim.g.clipboard = {
-  name = "myClipboard",
-  copy = {
-    ['+'] = "tmux load-buffer -",
-    ['*'] = "tmux load-buffer -",
-  },
-  paste = {
-    ['+'] = "tmux save-buffer -",
-    ['*'] = "tmux save-buffer -",
-  },
-  cache_enabled = 1
-}
-vim.lsp.set_log_level("debug")
