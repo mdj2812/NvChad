@@ -2,21 +2,21 @@ local plugins = {
   {
     "RRethy/vim-illuminate",
     event = "BufEnter",
-    config = function ()
+    config = function()
       return require "custom.configs.vim-illuminate"
     end,
   },
   {
     "natecraddock/sessions.nvim",
     lazy = false,
-    config = function ()
+    config = function()
       require "custom.configs.sessions"
     end,
   },
   {
     "natecraddock/workspaces.nvim",
     lazy = false,
-    config = function ()
+    config = function()
       require "custom.configs.workspaces"
     end,
   },
@@ -29,10 +29,10 @@ local plugins = {
     end,
   },
   {
-    "jose-elias-alvarez/null-ls.nvim",
-    event = "VeryLazy",
-    opts = function()
-      return require "custom.configs.null-ls"
+    "stevearc/conform.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      require "custom.configs.formatting"
     end,
   },
   {
@@ -54,7 +54,7 @@ local plugins = {
   {
     "sindrets/diffview.nvim",
     event = "VeryLazy",
-    config = function ()
+    config = function()
       require "custom.configs.diffviewconfig"
     end
   },

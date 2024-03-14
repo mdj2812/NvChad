@@ -5,7 +5,7 @@ local capabilities = base.capabilities
 local lspconfig = require("lspconfig")
 
 lspconfig.pylsp.setup {
-  on_attach = function (client, bufnr)
+  on_attach = function(client, bufnr)
     client.server_capabilities.signatureHelpProvider = false
     on_attach(client, bufnr)
   end,
@@ -14,10 +14,11 @@ lspconfig.pylsp.setup {
       plugins = {
         -- formatter options
         black = { enabled = false },
-        autopep8 = { enabled = true, maxLineLength = 120 },
+        autopep8 = { enabled = true },
         yapf = { enabled = false },
+        flake8 = { enabled = true },
         -- linter options
-        pylint = { enabled = true, executable = "pylint", args = "--max-line-length 120" },
+        pylint = { enabled = true, args = { '--max-line-length', '120' } },
         pyflakes = { enabled = false },
         pycodestyle = { enabled = false },
         -- type checker
