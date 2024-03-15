@@ -14,7 +14,7 @@ lspconfig.pylsp.setup {
       plugins = {
         -- formatter options
         black = { enabled = false },
-        autopep8 = { enabled = true },
+        autopep8 = { enabled = false },
         yapf = { enabled = false },
         flake8 = { enabled = true },
         -- linter options

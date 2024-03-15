@@ -8,10 +8,15 @@ conform.setup({
     -- ["*"] = { "codespell" },
     ["_"] = { "trim_whitespace" },
   },
+  formatters = {
+    autopep8 = {
+      args = { "--max-line-length", "120", "-aa", "--experimental", "$FILENAME" },
+    }
+  },
   format_on_save = {
     lsp_fallback = true,
     async = false,
-    timeout_ms = 500,
+    timeout_ms = 1000,
   },
 })
 
