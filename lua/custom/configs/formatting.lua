@@ -5,7 +5,7 @@ conform.setup({
     cpp = { "clang-format" },
     lua = { "stylua" },
     python = { "isort", "autopep8" },
-    ["*"] = { "codespell" },
+    -- ["*"] = { "codespell" },
     ["_"] = { "trim_whitespace" },
   },
   format_on_save = {
