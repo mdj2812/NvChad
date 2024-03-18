@@ -10,10 +10,10 @@ conform.setup({
   },
   formatters = {
     autopep8 = {
-      args = { "--max-line-length", "120", "-aa", "-i", "$FILENAME" },
+      args = { "--max-line-length", "120", "-aa", "$FILENAME" },
     }
   },
-  format_on_save = {
+  format_after_save = {
     lsp_fallback = true,
     async = false,
     timeout_ms = 1000,
@@ -25,7 +25,7 @@ vim.keymap.set({ "n", "v" }, "<leader>mp",
     conform.format({
       lsp_fallback = true,
       async = false,
-      timeout_ms = 500,
+      timeout_ms = 1000,
     })
   end
 )
