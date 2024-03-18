@@ -10,7 +10,7 @@ conform.setup({
   },
   formatters = {
     autopep8 = {
-      args = { "--max-line-length", "120", "-aa", "--experimental", "$FILENAME" },
+      args = { "--max-line-length", "120", "-aa", "-i", "$FILENAME" },
     }
   },
   format_on_save = {
