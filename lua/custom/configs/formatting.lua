@@ -5,12 +5,16 @@ conform.setup({
     cpp = { "clang-format" },
     lua = { "stylua" },
     python = { "isort", "autopep8" },
+    json = { "jq" },
     -- ["*"] = { "codespell" },
     ["_"] = { "trim_whitespace" },
   },
   formatters = {
     autopep8 = {
       args = { "--max-line-length", "120", "-aa", "$FILENAME" },
+    },
+    jq = {
+      args = { "--indent", "4" },
     }
   },
   format_after_save = {
