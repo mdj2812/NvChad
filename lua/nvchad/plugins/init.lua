@@ -139,7 +139,11 @@ return {
 
   {
     "nvim-telescope/telescope.nvim",
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+      { "nvim-telescope/telescope-live-grep-args.nvim", version = "^1.0.0" },
+    },
     cmd = "Telescope",
     opts = function()
       return require "nvchad.configs.telescope"
