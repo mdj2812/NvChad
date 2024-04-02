@@ -17,6 +17,26 @@ local options = {
 
     local map = vim.keymap.set
 
+    -- Navigation
+    map("n", "]c", function()
+      if vim.wo.diff then
+        return "]c"
+      end
+      vim.schedule(function()
+        gs.next_hunk()
+      end)
+      return "<Ignore>"
+    end, { expr = true })
+
+    map("n", "[c", function()
+      if vim.wo.diff then
+        return "[c"
+      end
+      vim.schedule(function()
+        gs.prev_hunk()
+      end)
+      return "<Ignore>"
+    end, { expr = true })
     map("n", "<leader>rh", gs.reset_hunk, opts "Reset Hunk")
     map("n", "<leader>ph", gs.preview_hunk, opts "Preview Hunk")
     map("n", "<leader>gb", gs.blame_line, opts "Blame Line")
